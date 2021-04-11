@@ -19,6 +19,7 @@ pytest = "^6.2.3"
 coverage = {extras = ["toml"], version = "^5.5"}
 pytest-cov = "^2.11.1"
 pytest-mock = "^3.5.1"
+isort = "^5.8.0"
 
 [tool.poetry.scripts]
 scaling-bassoon = "scaling_bassoon.console:main"
@@ -33,6 +34,10 @@ source = ["scaling_bassoon"]
 [tool.coverage.report]
 show_missing = true
 fail_under = 100
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
