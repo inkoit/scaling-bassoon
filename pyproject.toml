@@ -30,6 +30,7 @@ safety = "^1.10.3"
 flake8-isort = "^4.0.0"
 mypy = "^0.812"
 typeguard = "^2.12.0"
+flake8-annotations = "^2.6.2"
 
 [tool.poetry.scripts]
 scaling-bassoon = "scaling_bassoon.console:main"
