@@ -1,11 +1,8 @@
 import textwrap
 
 import click
-import requests
 
-from . import __version__
-
-
+from . import __version__, wikipedia
 
 
 @click.command()
@@ -13,11 +10,7 @@ from . import __version__
 @click.option("--lang", default="en", help="Language of an article")
 def main(lang):
     """The hypermodern Python project."""
-
-    api_url = f"https://{lang.lower()}.wikipedia.org/api/rest_v1/page/random/summary"
-    with requests.get(api_url) as response:
-        response.raise_for_status()
-        data = response.json()
+    data = wikipedia.random_page(lang)
 
     title = data["title"]
     extract = data["extract"]
