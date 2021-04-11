@@ -11,8 +11,12 @@ keywords = ["hypermodern"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+click = "^7.0"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+scaling-bassoon = "scaling_bassoon.console:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
