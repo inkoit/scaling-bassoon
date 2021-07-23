@@ -2,7 +2,7 @@ import tempfile
 
 import nox
 
-locations = "src", "tests", "noxfile.py"
+locations = "src", "tests", "noxfile.py", "docs/conf.py"
 nox.options.sessions = "lint", "mypy", "safety", "tests"
 package = "scaling_bassoon"
 
@@ -93,3 +93,10 @@ def xdoctest(session) -> None:
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "xdoctest", "pygments")
     session.run("python", "-m", "xdoctest", package, *args)
+
+
+@nox.session(python="3.8")
+def docs(session) -> None:
+    """Build the documentation."""
+    install_with_constraints(session, "sphinx")
+    session.run("sphinx-build", "docs", "docs/_build")
