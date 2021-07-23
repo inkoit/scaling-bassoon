@@ -33,6 +33,8 @@ typeguard = "^2.12.0"
 flake8-annotations = "^2.6.2"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.0"
+xdoctest = "^0.15.5"
+Pygments = "^2.9.0"
 
 [tool.poetry.scripts]
 scaling-bassoon = "scaling_bassoon.console:main"
