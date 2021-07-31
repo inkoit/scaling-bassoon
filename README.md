@@ -1,4 +1,4 @@
-# Scaling Bassoon (a.k.a. Hypermodern Python
+# Scaling Bassoon (a.k.a. Hypermodern Python)
 
 Hypermodern Python tryout based on cjolowicz's one
 
